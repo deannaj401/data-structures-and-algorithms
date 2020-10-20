@@ -86,8 +86,8 @@ const courseInfo = {
   finalExam: true
 };
 
-const getCourseKeys = (() => {
-  Object.keys(courseInfo).forEach(property => {
+const getCourseKeys = (obj) => {
+  Object.keys(courseInfo) .forEach(property => {
     return(property, courseInfo[property]);
   });
 
