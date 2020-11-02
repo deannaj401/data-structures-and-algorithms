@@ -12,12 +12,12 @@ Note the space in between first and last names.
 You can assume that neither firstName nor lastName will be blank
 ------------------------------------------------------------------------------------------------ */
 const toLastNames = people => {
-  let newArr = [];
+  let peopleArr = [];
 
   people.map(person => {
-    return newArr.push(`${person.firstName} ${person.lastName}`);
+    return peopleArr.push(`${person.firstName} ${person.lastName}`);
   });
-  return newArr;
+  return peopleArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -30,6 +30,7 @@ If the PIN is four numerical digits long, return true. Otherwise, return false.
 
 const validatePin = (pin) => {
   let validate = /^\d{4}\b/g;
+
   return validate.test(pin);
 };
 
@@ -90,7 +91,7 @@ findTagNames(['<div><h1>Hello, world!</h1></div>', '<p>Welcome to my site</p>'])
 ------------------------------------------------------------------------------------------------ */
 
 const findTagNames = elements => {
-  // Solution code here...
+
 };
 
 /* ------------------------------------------------------------------------------------------------
