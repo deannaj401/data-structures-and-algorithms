@@ -9,7 +9,14 @@ using the 'reduce' method.
 E.g. [4,2,7,5,9,2] -> 9
 ------------------------------------------------------------------------------------------------ */
 const maxInArray = (arr) => {
-  // Solution code here...
+
+  return arr.reduce((potato, maxValue) => {
+    if (maxValue > potato) {
+      return potato = maxValue;
+    }
+    return potato;
+  }, 0);
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -35,11 +42,22 @@ const alkiBeach = [33, 31, 147, 130, 27, 93, 38, 126, 141, 63, 46, 17];
 const cookieStores = [firstPike, seaTac, seattleCenter, capHill, alkiBeach];
 
 const grandTotal = (stores) => {
-  return stores.reduce((array1, array2) => {
 
-  });
+  const totalSales = [];
+  for (let i = 0; i < stores[0].length; i++) {
+    let totalCookies = 0;
+    for (let j = 0; j < stores.length; j++) {
+      totalCookies += stores[j][i];
+    }
+    totalSales.push(totalCookies);
+
+  }
+  return totalSales;
 
 };
+
+
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
@@ -52,8 +70,20 @@ Write a function named salesData that uses forEach to iterate over the hourlySal
 ------------------------------------------------------------------------------------------------ */
 
 const salesData = (hours, data) => {
-  // Solution code here...
+
+  const cookieHours = [];
+  data.forEach((value, index) => {
+    cookieHours.push({
+      sales: `${value} cookies`,
+      time: hours[index]
+    });
+
+  });
+  return cookieHours;
+
 };
+
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
@@ -76,9 +106,13 @@ const errands = [
   }
 ];
 
-const howManyTreats = (arr) => {
-  // Solution code here...
+
+const howManyTreats = (_arr) => {
+  return _arr[2].items[1].quantity;
 };
+
+
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5 - Stretch Goal
@@ -98,7 +132,11 @@ Here is a sample board:
 The top row of the board is considered row zero and row numbers increase as they go down.
 ------------------------------------------------------------------------------------------------ */
 
+
+const battleship = (_board, _row, _col) => {
+
 const battleship = (board, row, col) => {
+
   //  Solution code here...
 };
 
@@ -110,7 +148,11 @@ Write a function named calculateProduct that takes in a two-dimensional array of
 For example, the following input returns a product of 720: [[1,2], [3,4], [5,6]]
 ------------------------------------------------------------------------------------------------ */
 
+
+const calculateProduct = (_numbers) => {
+
 const calculateProduct = (numbers) => {
+
   // Solution code here...
 };
 
@@ -130,7 +172,11 @@ const weeklyTemperatures = [
   [65, 56, 55, 52, 55, 62, 57],
 ];
 
+
+const averageDailyTemperature = (_weather) => {
+
 const averageDailyTemperature = (weather) => {
+
   // Solution code here...
 };
 
@@ -151,7 +197,11 @@ let lowestWeeklyTemperatureData = [
   [65, 56, 55, 52, 55, 62, 57],
 ];
 
+
+
+
 const lowestWeeklyAverage = (weather) => {
+
   // Solution code here...
 };
 
@@ -167,7 +217,11 @@ The function should parse the string as rows and columns and compute the sum of 
 For example, excel('1,1,1\n4,4,4\n9,9,9') returns [3, 12, 27].
 ------------------------------------------------------------------------------------------------ */
 
+
+const excel = (_str) => {
+
 const excel = (str) => {
+
   // Solution code here...
 };
 
